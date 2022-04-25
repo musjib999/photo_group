@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:picture_group/module/home.dart';
+import 'package:picture_group/shared/widgets/home_bottom_nav.dart';
+
+import 'shared/global/global_var.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color(0xff116169),
         primarySwatch: Colors.teal,
       ),
-      home: const Home(),
+      home: HomeBottomNavigation(pages: pages),
     );
   }
 }
